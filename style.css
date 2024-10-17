@@ -203,9 +203,9 @@ button:hover {
     bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: black;
     font-size: 3rem;
-    background-color: rgba(0, 0, 0, 0.358); 
+    /* background-color: rgba(0, 0, 0, 0.358);  */
     padding: 10px;
     border-radius: 5px;
     text-align: center;
@@ -273,7 +273,7 @@ button:hover {
     text-align: center;
     padding-top: 5rem;
     font-weight: 500;
-    height: 90vh;
+    height: 110vh;
 }
 
 .divider2 {
@@ -282,7 +282,7 @@ button:hover {
 
 .service {
     height: 100%;
-    background-image: url('/images/background.jpg');
+    background-image: url('/images/service.png');
     position: relative;
     background-size: cover;
     background-position: center;
@@ -302,9 +302,22 @@ button:hover {
     transition: transform 0.3s ease;
 }
 
-
 .service a button:hover {
     transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    #service{
+        height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    #service{
+        height: 40vh;
+    }
+
+
 }
 
 #testimonials {
@@ -413,6 +426,12 @@ button:hover {
     color: red;
 }
 
+@media (max-width: 480px) {
+    .contact-form-container{
+        width: 40vh;
+    }  
+}
+
 
 .footer {
     background-color: black;
@@ -499,7 +518,6 @@ span {
 
 /*Login Dashboard - username*/
 
-
 .navbar ul{
     list-style: none;
 }
@@ -517,4 +535,54 @@ span {
 
 .navbar li:hover a {
     background-color: white;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    padding-top: 1rem;
+    width: 100vw;
+}
+
+.username{
+    padding-left: 1.5rem;
+}
+
+.place-order{
+    padding-right: 1.5rem;
+}
+
+.user div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user p {
+    font-size: 16px;
+    color: #333;
+}
+
+.place-order button {
+    background-color: black;
+}
+
+.place-order button a{
+    color: white;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .user {
+        flex-direction: column;
+    }
+
+    .place-order{
+        padding-left: 1.5rem;
+        width: 10rem;
+
+    }
 }
