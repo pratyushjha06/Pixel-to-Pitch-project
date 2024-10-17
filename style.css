@@ -554,6 +554,70 @@ span {
     background-color: white;
 }
 
+.panel {
+    display: flex;
+    overflow-x: auto; 
+    white-space: nowrap; 
+    background-color: #222f3d;
+    color: white;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 10px;
+}
+
+.panel-option {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 0.89rem;
+}
+
+.panel-option p,
+.panel-option select {
+    padding: 10px 10px;
+    margin: 0;
+    background-color: #222f3d;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .panel-option {
+        flex-wrap: nowrap;
+        overflow-x: auto; 
+    }
+
+    .panel-option p, .panel-option select {
+        padding: 8px 10px;
+        flex-shrink: 0;
+    }
+
+    .panel-option p, .panel-option select {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel {
+        justify-content: flex-start;
+    }
+
+    .panel-option {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto; 
+    }
+
+    .panel-option p, .panel-option select {
+        flex-shrink: 0;
+        padding: 8px; 
+    }
+}
+
 .user {
     display: flex;
     flex-direction: row;
