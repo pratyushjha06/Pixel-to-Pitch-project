@@ -7,7 +7,7 @@ body {
     background-color: whitesmoke;
 }
 
-.navbar img{
+.navbar img {
     height: 3rem;
     border-radius: 25px;
 }
@@ -193,7 +193,7 @@ button:hover {
 .slide img {
     width: 100%;
     height: auto;
-    opacity: 0.7; 
+    opacity: 0.7;
     vertical-align: middle;
 }
 
@@ -218,8 +218,13 @@ button:hover {
 }
 
 @keyframes fadeEffect {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -307,17 +312,15 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    #service{
-        height: 80vh;
+    #service {
+        height: 30vh;
     }
 }
 
 @media (max-width: 480px) {
-    #service{
+    #service {
         height: 40vh;
     }
-
-
 }
 
 #testimonials {
@@ -346,6 +349,10 @@ button:hover {
     font-size: 1.5rem;
 }
 
+.box p{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
 @keyframes moveFromLeft {
     0% {
         transform: translateX(-100%);
@@ -357,6 +364,16 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+    #box {
+        display: block;
+    }
+
+    .box {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 480px) {
     #box {
         display: block;
     }
@@ -427,9 +444,9 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    .contact-form-container{
+    .contact-form-container {
         width: 40vh;
-    }  
+    }
 }
 
 
@@ -518,7 +535,7 @@ span {
 
 /*Login Dashboard - username*/
 
-.navbar ul{
+.navbar ul {
     list-style: none;
 }
 
@@ -546,11 +563,11 @@ span {
     width: 100vw;
 }
 
-.username{
+.username {
     padding-left: 1.5rem;
 }
 
-.place-order{
+.place-order {
     padding-right: 1.5rem;
 }
 
@@ -569,7 +586,7 @@ span {
     background-color: black;
 }
 
-.place-order button a{
+.place-order button a {
     color: white;
     text-decoration: none;
 }
@@ -580,9 +597,80 @@ span {
         flex-direction: column;
     }
 
-    .place-order{
+    .place-order {
         padding-left: 1.5rem;
         width: 10rem;
 
+    }
+}
+
+#inventory h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.product-list{
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    width: 100%; 
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item img {
+    height: 30vh;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); 
+}
+
+.add-product-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-product-btn:hover {
+    background-color: #218838;
+}
+
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
     }
 }
