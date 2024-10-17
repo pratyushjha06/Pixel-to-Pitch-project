@@ -135,6 +135,31 @@
         <h2>Get in touch with us</h2>
         <hr class="divider divider2">
 
+        <div class="contact-form-container">
+            <form id="contactForm">
+                <h2>Contact Us</h2>
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="mobile">Mobile No:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+        
+                <button type="submit">Submit</button>
+            </form>
+        
+            <div id="statusMessage"></div>
+        </div>
+        
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="script-contact.js"></script>
+
 
     </section>
 
@@ -178,6 +203,7 @@
 
     <script src="/js/script.js"></script>
     <script src="/js/slider.js"></script>
+    <script src="/js/script-contact.js"></script>
 </body>
 
 </html>
